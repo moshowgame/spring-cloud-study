@@ -13,7 +13,7 @@ import javax.websocket.server.ServerEndpoint;
 
 import org.springframework.stereotype.Component;
 
-@ServerEndpoint("/comsocket/{sid}")
+@ServerEndpoint("/demosocket/{sid}")
 @Component
 public class PortSocketServer {
 	

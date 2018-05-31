@@ -1,52 +1,13 @@
+server:
+  port: 8888
 spring:
   application:
-    name: EUREKA-HA
-
----
-server:
-  port: 9091
-  
-spring:
-  profiles: eureka1
-  
+    name: EUREKA-CENTER
 eureka:
   instance:
-    hostname: eureka1
+    hostname: localhost
   client:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://127.0.0.1:9092/eureka/,http://127.0.0.1:9093/eureka/
-
----
-server:
-  port: 9092
-   
-spring:
-  profiles: eureka2
-  
-eureka:
-  instance:
-    hostname: eureka2
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    serviceUrl:
-      defaultZone: http://127.0.0.1:9091/eureka/,http://127.0.0.1:9093/eureka/
-      
----
-server:
-  port: 9093
-   
-spring:
-  profiles: eureka3
-  
-eureka:
-  instance:
-    hostname: eureka3
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    serviceUrl:
-      defaultZone: http://127.0.0.1:9091/eureka/,http://127.0.0.1:9092/eureka/
-    
+      defaultZone: http://localhost:8888/eureka/

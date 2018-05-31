@@ -8,5 +8,13 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://127.0.0.1:9091/eureka/,http://127.0.0.1:9092/eureka/,http://127.0.0.1:9093/eureka/
-
+      defaultZone: http://localhost:8888/eureka/
+zuul:
+    routes:
+     apis1:
+      path: /api1/**
+      #serviceId: spring-cloud-study-demo
+      serviceId: SPRING-CLOUD-STUDY-DEMO
+     apis2:
+      path: /api2/**
+      url: http://127.0.0.1:9999/
