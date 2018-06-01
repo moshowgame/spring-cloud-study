@@ -1,4 +1,4 @@
-package com.softdev.system.zuul;
+package com.softdev.system.zuul.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

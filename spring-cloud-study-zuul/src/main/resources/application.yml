@@ -10,6 +10,9 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8888/eureka/
 zuul:
+#需要忽略的头部信息，不在传播到其他服务
+    sensitive-headers: Access-Control-Allow-Origin
+    ignored-headers: Access-Control-Allow-Origin,H-APP-Id,Token,APPToken
     routes:
      apis1:
       path: /api1/**
