@@ -21,3 +21,13 @@ zuul:
      apis2:
       path: /api2/**
       url: http://127.0.0.1:9999/
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000  #设置API网关中路由转发请求的HystrixCommand执行超时时间
+ribbon:
+  connectTimeout: 3000 #设置路由转发请求的时候，创建请求连接的超时时间
+  readTimeout: 60000  #用来设置路由转发请求的超时时间

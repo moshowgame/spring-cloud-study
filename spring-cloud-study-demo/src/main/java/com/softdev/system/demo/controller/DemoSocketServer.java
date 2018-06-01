@@ -15,14 +15,14 @@ import org.springframework.stereotype.Component;
 
 @ServerEndpoint("/demosocket/{sid}")
 @Component
-public class PortSocketServer {
+public class DemoSocketServer {
 	
 	
     //静态变量，用来记录当前在线连接数。应该把它设计成线程安全的。
     private static int onlineCount = 0;
     
     //concurrent包的线程安全Set，用来存放每个客户端对应的MyWebSocket对象。
-    private static CopyOnWriteArraySet<PortSocketServer> webSocketSet = new CopyOnWriteArraySet<PortSocketServer>();
+    private static CopyOnWriteArraySet<DemoSocketServer> webSocketSet = new CopyOnWriteArraySet<DemoSocketServer>();
 
     //与某个客户端的连接会话，需要通过它来给客户端发送数据
     private Session session;
@@ -58,7 +58,7 @@ public class PortSocketServer {
     public void onMessage(String message, Session session) {
     	System.out.println("收到来自窗口"+sid+"的信息:"+message);
         //群发消息
-        for (PortSocketServer item : webSocketSet) {
+        for (DemoSocketServer item : webSocketSet) {
             try {
                 item.sendMessage(message);
             } catch (IOException e) {
@@ -90,7 +90,7 @@ public class PortSocketServer {
      * */
     public static void sendInfo(String message,@PathParam("sid") String sid) throws IOException {
     	System.out.println("推送消息到窗口"+sid+"，推送内容:"+message);
-        for (PortSocketServer item : webSocketSet) {
+        for (DemoSocketServer item : webSocketSet) {
             try {
             	//这里可以设定只推送给这个sid的，为null则全部推送
             	if(sid==null) {
@@ -109,10 +109,10 @@ public class PortSocketServer {
     }
 
     public static synchronized void addOnlineCount() {
-        PortSocketServer.onlineCount++;
+        DemoSocketServer.onlineCount++;
     }
 
     public static synchronized void subOnlineCount() {
-        PortSocketServer.onlineCount--;
+        DemoSocketServer.onlineCount--;
     }
 }
