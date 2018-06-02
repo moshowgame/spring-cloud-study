@@ -43,16 +43,16 @@ http://blog.csdn.net/moshowgame
 
 
 端口启动情况：
-【eureka】
-http://127.0.0.1:8888/eureka 注册中心
-【zuul】
-http://127.0.0.1:7777/api1/demo/index
-http://127.0.0.1:7777/api2/demo/index
-http://127.0.0.1:7777/api1/demo/socket/222
-【demo】
-http://127.0.0.1:9999/demo/socket/222  websocket请求页面
-http://127.0.0.1:9999/demo/index json数据返回
-http://127.0.0.1:9999/demosocket/222  socket请求地址
-http://127.0.0.1:9999/basepath 获取微服务路径
+【eureka】 <br>
+http://127.0.0.1:8888/eureka 注册中心<br>
+【zuul】 <br>
+http://127.0.0.1:7777/api1/demo/index 路由转发请求，反正就是http://127.0.0.1:7777/api1/+demo项目的路径即可<br>
+http://127.0.0.1:7777/api2/demo/index <br>
+http://127.0.0.1:7777/api1/demo/socket/222 <br>
+【demo】 <br>
+http://127.0.0.1:9999/demo/socket/222  websocket请求页面<br>
+http://127.0.0.1:9999/demo/index json数据返回<br>
+http://127.0.0.1:9999/demosocket/222  socket请求地址<br>
+http://127.0.0.1:9999/basepath 获取微服务路径<br>
 
 
