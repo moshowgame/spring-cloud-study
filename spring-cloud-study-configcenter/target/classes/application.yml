@@ -1,0 +1,14 @@
+server:
+  port: 5555
+#https://cloud.spring.io/spring-cloud-config/#quick-start
+spring:
+#在其他系统要这么配置
+#  cloud:
+#    config:
+#      uri: http://127.0.0.1:5555
+  profiles:
+    active: native
+  application:
+    name: configcenter
+system:
+  miniprogram: http://88888888.com

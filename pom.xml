@@ -21,6 +21,9 @@
 		<module>spring-cloud-study-zuul</module>
 		<!-- demo项目 -->
 		<module>spring-cloud-study-demo</module>
+		<!-- 配置中心 -->
+		<module>spring-cloud-study-configcenter</module>
+		
 	</modules>
 
 
