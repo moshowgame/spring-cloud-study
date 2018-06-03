@@ -44,7 +44,7 @@ IDE:Spring Tool Suit(STS)<br>
 1、最先启动的是spring-cloud-study-eureka，因为它是注册中心，大多数微服务必须依赖于它才能实现必要的功能。 <br>
 2、接着zuul路由中心，启用spring-cloud-study-zuul，并配置yml文件即可(已经带了一点小配置，可根据实际情况修改)。 <br>
 3、然后启用spring-cloud-study-demo，这是一个demo项目<br>
-4、可以启用spring-cloud-study-configcenter，这里可以从yml或者其他地方读取并统一配置变量
+4、可以启用spring-cloud-study-configcenter，这里可以从yml或者其他地方读取并统一配置变量<br>
 5、可以启用spring-cloud-study-jpa，配置一下yml里面数据库连接池的地址，默认是127.0.0.1:3306 root/root，
 启动项目可以自动建表，使用init方法可以自动初始化语句，无需自己动数据库
 
