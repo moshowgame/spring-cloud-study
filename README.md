@@ -17,7 +17,7 @@ http://blog.csdn.net/moshowgame
 <td>spring-cloud-study-zuul</td>  <td>动态转发路由器</td>  <td>7777</td>
 </tr>
 <tr>
-<td>spring-cloud-study-demo</td>  <td>配置管理中心</td>  <td>9999</td>
+<td>spring-cloud-study-demo</td>  <td>DEMO项目(含websocket，json，不含jpa)</td>  <td>9999</td>
 </tr>
 <tr>
 <td>spring-cloud-study-configcenter</td>  <td>配置中心</td>  <td>5555</td>
