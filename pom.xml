@@ -19,11 +19,12 @@
 		<module>spring-cloud-study-eureka</module>
 		<!-- zuul转发路由 -->
 		<module>spring-cloud-study-zuul</module>
-		<!-- demo项目 -->
+		<!-- demo项目(包括WebSocket) -->
 		<module>spring-cloud-study-demo</module>
 		<!-- 配置中心 -->
 		<module>spring-cloud-study-configcenter</module>
-		
+		<!-- jpa(hibernate实现) -->
+		<module>spring-cloud-study-jpa</module>
 	</modules>
 
 
@@ -47,6 +48,11 @@
 	</dependencyManagement>
 
 	<dependencies>
+	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -104,11 +110,17 @@
 			<artifactId>lombok</artifactId>
 		</dependency>
 
+		<!-- mysql -->
 		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+		
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
@@ -133,6 +145,12 @@
 			<artifactId>spring-boot-starter-websocket</artifactId>
 		</dependency>
 
+		<!-- freemarker -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
+		
 		<!-- java.lang.ClassNotFoundException: javax.xml.bind.JAXBException/javax.xml.bind.annotation.XmlType问题解决 -->
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
