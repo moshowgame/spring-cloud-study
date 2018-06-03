@@ -77,7 +77,7 @@ http://127.0.0.1:5555/application/dev 获取application-dev.yml的变量 <br>
 http://127.0.0.1:4444/jpa/user/init/8899 初始化8899的用户 <br>
 http://127.0.0.1:4444/jpa/user/roles/8899 获取8899用户的角色 <br>
 
-四、版本更新
+四、版本更新<br>
 20180603 update:<br>
 1.新增jpa
 2.优化调整<br>
