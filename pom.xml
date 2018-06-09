@@ -25,6 +25,8 @@
 		<module>spring-cloud-study-configcenter</module>
 		<!-- jpa(hibernate实现) -->
 		<module>spring-cloud-study-jpa</module>
+		<!-- feign微服务远程调用 -->
+		<module>spring-cloud-study-feign</module>
 	</modules>
 
 
@@ -96,6 +98,13 @@
 			<artifactId>springloaded</artifactId>
 			<version>1.2.6.RELEASE</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-feign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+            <version>1.4.4.RELEASE</version>
+        </dependency>
 
 		<!-- Hutool超级工具类 http://hutool.mydoc.io/ -->
 		<dependency>

@@ -1,5 +1,8 @@
 package com.softdev.system.demo.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang.StringUtils;
@@ -16,6 +19,7 @@ import com.softdev.system.demo.util.BasePath;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+
 @Api("DEMO接口")
 @Controller
 public class DemoController {
@@ -41,5 +45,17 @@ public class DemoController {
 	@ResponseBody
 	public ApiReturnObject  basePath(HttpServletRequest request){
 		return ApiReturnUtil.success(BasePath.getBasePath(request));
+	}
+	
+	@GetMapping("/getData/{uid}")
+	@ResponseBody
+	public ApiReturnObject getData(@PathVariable String uid,String data){
+		System.out.println("#spring-cloud-study-demo#");
+		System.out.println("uid->"+uid+",data->"+data);
+		Map<String,String> map=new HashMap<String,String>();
+		map.put(uid,data);
+		map.put("feign","远程调用微服务");
+		map.put("demo","本地微服务");
+		return ApiReturnUtil.success(map);
 	}
 }

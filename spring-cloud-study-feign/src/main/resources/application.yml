@@ -1,0 +1,39 @@
+server:
+  port: 6666
+  servlet:
+      context-path: /feign
+tomcat:
+    remote-ip-header: x-forward-for
+    uri-encoding: UTF-8
+    max-threads: 10
+    background-processor-delay: 30
+spring:
+    http:
+      encoding:
+        force: true
+        charset: UTF-8
+    application:
+        name: spring-cloud-study-feign
+    freemarker:
+        request-context-attribute: req
+        #prefix: /templates/
+        suffix: .html
+        content-type: text/html
+        enabled: true
+        cache: false
+        charset: UTF-8
+        allow-request-override: false
+        expose-request-attributes: true
+        expose-session-attributes: true
+        expose-spring-macro-helpers: true
+        #template-loader-path: classpath:/templates/
+eureka:
+  client:
+    #是否将自己注册到eureka服务注册中心，默认为true
+    register-with-eureka: true
+    #是否从服务注册中心获取可用的服务清单，默认为true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+  instance:
+    ip-address: ture
