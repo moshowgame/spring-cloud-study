@@ -1,0 +1,46 @@
+server:
+  port: 2222
+  servlet:
+      context-path: /redis
+tomcat:
+    remote-ip-header: x-forward-for
+    uri-encoding: UTF-8
+    max-threads: 10
+    background-processor-delay: 30
+spring:
+    http:
+      encoding:
+        force: true
+        charset: UTF-8
+    application:
+        name: spring-cloud-study-redis
+    freemarker:
+        request-context-attribute: req
+        #prefix: /templates/
+        suffix: .html
+        content-type: text/html
+        enabled: true
+        cache: false
+        charset: UTF-8
+        allow-request-override: false
+        expose-request-attributes: true
+        expose-session-attributes: true
+        expose-spring-macro-helpers: true
+        #template-loader-path: classpath:/templates/
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+  instance:
+    ip-address: ture
+  #Jedis配置
+jedis:
+    pool:
+      host: 127.0.0.1
+      port: 6379
+      password: password
+      timeout: 0
+      config:
+      maxTotal: 100
+      maxIdle: 10
+      maxWaitMillis: 100000

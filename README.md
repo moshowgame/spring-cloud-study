@@ -27,6 +27,8 @@ http://blog.csdn.net/moshowgame
 </tr>
 <td>spring-cloud-study-feign</td>  <td>微服务远程调用</td>  <td>6666</td>
 </tr>
+<td>spring-cloud-study-redis</td>  <td>热点数据缓存</td>  <td>2222</td>
+</tr>
 </tbody></table>
 <br>
 
@@ -54,6 +56,7 @@ http://blog.csdn.net/moshowgame
  5. 可以启用spring-cloud-study-jpa，配置一下yml里面数据库连接池的地址，默认是127.0.0.1:3306 root/root，
 启动项目可以自动建表，使用init方法可以自动初始化语句，无需自己动数据库<br>
  6. 可以启动spring-cloud-study-feign，他会远程调用demo的内容<br>
+ 6. 可以单独启动spring-cloud-study-redis需要自己启动一个redis，参考https://blog.csdn.net/moshowgame/article/details/80792774<br>
 
 ###三、使用说明
 
@@ -114,15 +117,54 @@ feign用于远程调用微服务，这里用来调用demo的内容，请先启�
 <tr><td>http://127.0.0.1:7777/spring-cloud-study-feign/feign/remote/demo/getData/222?data=springcloudstudybyzuul</td><td>理由转发+远程调用demo </td></tr>
 </tbody></table>
 
+redis
+----
+操作实名参考https://blog.csdn.net/moshowgame/article/details/80792774
+<table><tbody>
+<tr><td>
+【放入缓存】</td><td>
+http://localhost:2222/redis/item/2</td><td>{"itemId":2,"itemName":"德玛西亚2"}</td></tr>
+<tr><td>
+【放入缓存】</td><td>
+http://localhost:2222/redis/item/3</td><td>{"itemId":3,"itemName":"德玛西亚3"}</td></tr>
+<tr><td>
+【读取缓存(可以去RedisDesktopManager看一下，已经有数据了)】</td><td>
+http://localhost:2222/redis/item/2</td><td>{"itemId":2,"itemName":"德玛西亚2"}</td></tr>
+<tr><td>
+【读取缓存(可以去RedisDesktopManager看一下，已经有数据了)】</td><td>
+http://localhost:2222/redis/item/3</td><td>{"itemId":3,"itemName":"德玛西亚3"}</td></tr>
+<tr><td>
+【放入list缓存】</td><td>
+http://localhost:2222/redis/item/all</td><td>[{"itemId":666,"itemName":"德玛西亚666"},{"itemId":999,"itemName":"德玛西亚999"}]</td></tr>
+<tr><td>
+【读取list缓存（这是一个空方法，只是因为有了缓存才有数据）】</td><td>
+http://localhost:2222/redis/item/all2</td><td>[{"itemId":666,"itemName":"德玛西亚666"},{"itemId":999,"itemName":"德玛西亚999"}]</td></tr>
+<tr><td>
+【更新缓存】</td><td>
+http://localhost:2222/redis/item/2/update</td><td>{"itemId":2,"itemName":"德玛西亚XXX2"}</td></tr>
+<tr><td>
+【重新读取缓存】</td><td>
+http://localhost:2222/redis/item/2</td><td>{"itemId":2,"itemName":"德玛西亚XXX2"}</td></tr>
+<tr><td>
+【EL表达式指定KEY】</td><td>
+访问地址 http://localhost:2222/redis/item/object?itemId=4&itemName=XXXX</td><td>  
+返回结果 {"itemId":4,"itemName":"XXXX"}</td></tr>
+<tr><td>
+【获取缓存（结果不变还是XXXX不是4444）】</td><td>
+访问地址 http://localhost:2222/redis/item/object?itemId=4&itemName=4444</td><td>  
+返回结果 {"itemId":4,"itemName":"XXXX"}</td></tr>
+</tbody></table>
 
 ###四、版本更新
 <br><br>
-20180609 update:<br>
-1.新增feign
+>>>20180624 update:<br>
+1.新增Redis<br>
+>>>20180609 update:<br>
+1.新增feign<br>
 2.优化说明<br>
-20180603 update:<br>
-1.新增jpa
+>>>20180603 update:<br>
+1.新增jpa<br>
 2.优化调整<br>
-20180602 update:<br>
-1.优化调整
+>>>20180602 update:<br>
+1.优化调整<br>
 2.新增configcenter<br>
