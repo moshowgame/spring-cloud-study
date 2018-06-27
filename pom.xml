@@ -29,6 +29,8 @@
 		<module>spring-cloud-study-feign</module>
 		<!-- redis热点缓存数据库 -->
 		<module>spring-cloud-study-redis</module>
+		<!-- jms消息队列 -->
+		<module>spring-cloud-study-jms</module>
 	</modules>
 
 

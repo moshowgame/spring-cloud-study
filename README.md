@@ -29,6 +29,8 @@ http://blog.csdn.net/moshowgame
 </tr>
 <td>spring-cloud-study-redis</td>  <td>热点数据缓存</td>  <td>2222</td>
 </tr>
+<td>spring-cloud-study-jms</td>  <td>JMS(Java消息服务，ActiveMQ实现)</td>  <td>1111</td>
+</tr>
 </tbody></table>
 <br>
 
@@ -56,8 +58,8 @@ http://blog.csdn.net/moshowgame
  5. 可以启用spring-cloud-study-jpa，配置一下yml里面数据库连接池的地址，默认是127.0.0.1:3306 root/root，
 启动项目可以自动建表，使用init方法可以自动初始化语句，无需自己动数据库<br>
  6. 可以启动spring-cloud-study-feign，他会远程调用demo的内容<br>
- 6. 可以单独启动spring-cloud-study-redis需要自己启动一个redis，参考https://blog.csdn.net/moshowgame/article/details/80792774<br>
-
+ 7. 可以单独启动spring-cloud-study-redis需要自己启动一个redis，参考https://blog.csdn.net/moshowgame/article/details/80792774<br>
+ 8. 可以单独启动spring-cloud-study-jms，已经内置ActiveMQ，也可以自己额外配置,详情请看https://blog.csdn.net/moshowgame/article/details/80836621<br>
 ###三、使用说明
 
 eureka
@@ -155,8 +157,20 @@ http://localhost:2222/redis/item/2</td><td>{"itemId":2,"itemName":"德玛西亚X
 返回结果 {"itemId":4,"itemName":"XXXX"}</td></tr>
 </tbody></table>
 
+jms
+----
+概念和操作可以参考https://blog.csdn.net/moshowgame/article/details/80836621
+<table><tbody>
+<tr><td>
+发送消息</td><td>
+http://localhost:1111/jms/email/send</td><td>控制台显示Received <Email{to=info@example.com, body=Hello}>
+</td></tr>
+</tbody></table>
+
 ###四、版本更新
 <br><br>
+>>>20180627 update:<br>
+1.新增Jms<br>
 >>>20180624 update:<br>
 1.新增Redis<br>
 >>>20180609 update:<br>
