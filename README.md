@@ -25,10 +25,13 @@ http://blog.csdn.net/moshowgame
 <tr>
 <td>spring-cloud-study-jpa</td>  <td>JPA(hibernate实现)</td>  <td>4444</td>
 </tr>
+<tr>
 <td>spring-cloud-study-feign</td>  <td>微服务远程调用</td>  <td>6666</td>
 </tr>
+<tr>
 <td>spring-cloud-study-redis</td>  <td>热点数据缓存</td>  <td>2222</td>
 </tr>
+<tr>
 <td>spring-cloud-study-jms</td>  <td>JMS(Java消息服务，ActiveMQ实现)</td>  <td>1111</td>
 </tr>
 </tbody></table>
