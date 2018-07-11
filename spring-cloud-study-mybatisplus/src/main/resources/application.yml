@@ -1,5 +1,5 @@
 server:
-  port: 1111
+  port: 3333
   servlet:
       context-path: /mybatisplus
 tomcat:

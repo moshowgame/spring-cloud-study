@@ -34,6 +34,9 @@ http://blog.csdn.net/moshowgame
 <tr>
 <td>spring-cloud-study-jms</td>  <td>JMS(Java消息服务，ActiveMQ实现)</td>  <td>1111</td>
 </tr>
+<tr>
+<td>spring-cloud-study-mybatisplus</td>  <td>mybatisplus(mybatis的加强版)</td>  <td>3333</td>
+</tr>
 </tbody></table>
 <br>
 
@@ -170,8 +173,19 @@ http://localhost:1111/jms/email/send</td><td>控制台显示Received <Email{to=i
 </td></tr>
 </tbody></table>
 
+mybatis-plus
+----
+Mybatis-Plus 是一款 Mybatis 动态 SQL 自动注入 Mybatis 增删改查 CRUD 操作中间件， 减少你的开发周期优化动态维护 XML 实体字段，无入侵全方位 ORM 辅助层让您拥有更多时间陪家人。<br>
+具体配置可以看我的文章https://blog.csdn.net/moshowgame/article/details/81008485
+<table><tbody>
+<tr><td>http://127.0.0.1:3333/mybatisplus/user/init</td><td>数据初始化</td></tr>
+<tr><td>http://127.0.0.1:3333/mybatisplus/user/find</td><td>通过QueryWarrap构造器查询</td></tr>
+</tbody></table>
+
 ###四、版本更新
 <br><br>
+>>>20180711 update:<br>
+1.新增MybatisPlus<br>
 >>>20180627 update:<br>
 1.新增Jms<br>
 >>>20180624 update:<br>
