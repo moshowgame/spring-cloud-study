@@ -31,6 +31,8 @@
 		<module>spring-cloud-study-redis</module>
 		<!-- jms消息队列 -->
 		<module>spring-cloud-study-jms</module>
+		<!-- Mybatis Plus -->
+		<module>spring-cloud-study-mybatisplus</module>
 	</modules>
 
 
