@@ -37,6 +37,9 @@ http://blog.csdn.net/moshowgame
 <tr>
 <td>spring-cloud-study-mybatisplus</td>  <td>mybatisplus(mybatis的加强版)</td>  <td>3333</td>
 </tr>
+<tr>
+<td>spring-cloud-study-poi</td>  <td>poi导入</td>  <td>8899</td>
+</tr>
 </tbody></table>
 <br>
 
@@ -176,26 +179,42 @@ http://localhost:1111/jms/email/send</td><td>控制台显示Received <Email{to=i
 mybatis-plus
 ----
 Mybatis-Plus 是一款 Mybatis 动态 SQL 自动注入 Mybatis 增删改查 CRUD 操作中间件， 减少你的开发周期优化动态维护 XML 实体字段，无入侵全方位 ORM 辅助层让您拥有更多时间陪家人。<br>
+
 具体配置可以看我的文章https://blog.csdn.net/moshowgame/article/details/81008485
 <table><tbody>
 <tr><td>http://127.0.0.1:3333/mybatisplus/user/init</td><td>数据初始化</td></tr>
 <tr><td>http://127.0.0.1:3333/mybatisplus/user/find</td><td>通过QueryWarrap构造器查询</td></tr>
 </tbody></table>
 
+poi-tl
+----
+很多时候我们网站或者系统需要提供一些word文件，例如证明.docx或者订单.docx等文件供用户下载打印等。
+
+用Java操作word文档，毫无疑问，当下最流行apache poi，对于poi如何操作word文档，这里不作过多介绍。
+
+这里主要讲解如何通过一个制作好的word模板文件，通过数据填充，生成加工好的word文件。
+
+具体可以看我的文章https://blog.csdn.net/moshowgame/article/details/81702029
+<table><tbody>
+<tr><td>http://localhost:8899/poi/generateWord</td><td>通过Word模板生成Word文件</td></tr>
+</tbody></table>
+
 ###四、版本更新
 <br><br>
->>>20180711 update:<br>
-1.新增MybatisPlus<br>
->>>20180627 update:<br>
-1.新增Jms<br>
->>>20180624 update:<br>
-1.新增Redis<br>
->>>20180609 update:<br>
-1.新增feign<br>
+>☛20180815 update:<br>
+1.new POI-TL project<br>
+>☛20180711 update:<br>
+1.new MybatisPlus project<br>
+>☛20180627 update:<br>
+1.new Jms project<br>
+>☛20180624 update:<br>
+1.new Redis project<br>
+>☛20180609 update:<br>
+1.new feign project<br>
 2.优化说明<br>
->>>20180603 update:<br>
-1.新增jpa<br>
+>☛20180603 update:<br>
+1.new jpa project<br>
 2.优化调整<br>
->>>20180602 update:<br>
+>☛20180602 update:<br>
 1.优化调整<br>
-2.新增configcenter<br>
+2.new configcenter project<br>

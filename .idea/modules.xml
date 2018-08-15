@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-study.iml" filepath="$PROJECT_DIR$/spring-cloud-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-study-configcenter/spring-cloud-study-configcenter.iml" filepath="$PROJECT_DIR$/spring-cloud-study-configcenter/spring-cloud-study-configcenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-study-demo/spring-cloud-study-demo.iml" filepath="$PROJECT_DIR$/spring-cloud-study-demo/spring-cloud-study-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-study-eureka/spring-cloud-study-eureka.iml" filepath="$PROJECT_DIR$/spring-cloud-study-eureka/spring-cloud-study-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-study-feign/spring-cloud-study-feign.iml" filepath="$PROJECT_DIR$/spring-cloud-study-feign/spring-cloud-study-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-study-jms/spring-cloud-study-jms.iml" filepath="$PROJECT_DIR$/spring-cloud-study-jms/spring-cloud-study-jms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-study-jpa/spring-cloud-study-jpa.iml" filepath="$PROJECT_DIR$/spring-cloud-study-jpa/spring-cloud-study-jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-study-mybatisplus/spring-cloud-study-mybatisplus.iml" filepath="$PROJECT_DIR$/spring-cloud-study-mybatisplus/spring-cloud-study-mybatisplus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-study-poi/spring-cloud-study-poi.iml" filepath="$PROJECT_DIR$/spring-cloud-study-poi/spring-cloud-study-poi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-study-redis/spring-cloud-study-redis.iml" filepath="$PROJECT_DIR$/spring-cloud-study-redis/spring-cloud-study-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-study-zuul/spring-cloud-study-zuul.iml" filepath="$PROJECT_DIR$/spring-cloud-study-zuul/spring-cloud-study-zuul.iml" />
+    </modules>
+  </component>
+</project>

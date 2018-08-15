@@ -34,7 +34,10 @@
 		<!-- Mybatis Plus -->
 		<module>spring-cloud-study-mybatisplus</module>
 		<!-- shiro -->
-		<module>spring-cloud-study-shiro</module>
+		<!--<module>spring-cloud-study-shiro</module>-->
+
+		<!-- poi -->
+		<module>spring-cloud-study-poi</module>
 	</modules>
 
 
