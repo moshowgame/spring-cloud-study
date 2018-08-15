@@ -1,7 +1,6 @@
 package com.softdev.system.demo.config;
 
 import javax.jms.ConnectionFactory;
-import javax.ws.rs.core.Application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.jms.DefaultJmsListenerContainerFactoryConfigurer;
