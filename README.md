@@ -201,6 +201,8 @@ poi-tl
 
 ###四、版本更新
 <br><br>
+>☛20181112 update:<br>
+1.优化mybatis-plus模块的导入，使用mybatis-plus stater简化操作
 >☛20180815 update:<br>
 1.new POI-TL project<br>
 >☛20180711 update:<br>
