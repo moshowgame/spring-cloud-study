@@ -21,29 +21,16 @@
 	</properties>
 	<dependencies>
 
-		<!-- 服务中心暂时不启yong -->
-		<!-- <dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId> 
-			</dependency> -->
-
-		<!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus -->
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
 		<dependency>
-			<groupId>com.baomidou</groupId>
-			<artifactId>mybatis-plus</artifactId>
-			<version>3.0-beta</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>5.1.2.RELEASE</version>
 		</dependency>
-		<!-- mybatis-plus begin -->
 		<dependency>
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus-boot-starter</artifactId>
-			<version>3.0-beta</version>
+			<version>3.0.5</version>
 		</dependency>
-		<!-- mybatis-plus end -->
-		 <!-- Spring Boot Mybatis 依赖 -->
-		<dependency>
-		    <groupId>org.mybatis.spring.boot</groupId>
-		    <artifactId>mybatis-spring-boot-starter</artifactId>
-		    <version>1.3.2</version>
-		</dependency>
-
 	</dependencies>
 </project>
