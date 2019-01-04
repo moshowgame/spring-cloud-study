@@ -40,6 +40,8 @@ http://blog.csdn.net/moshowgame
 <tr>
 <td>spring-cloud-study-poi</td>  <td>poi导入</td>  <td>8899</td>
 </tr>
+<td>spring-cloud-study-aop</td>  <td>aop切面编程</td>  <td>9998</td>
+</tr>
 </tbody></table>
 <br>
 
@@ -199,10 +201,21 @@ poi-tl
 <tr><td>http://localhost:8899/poi/generateWord</td><td>通过Word模板生成Word文件</td></tr>
 </tbody></table>
 
+aop
+----
+Aspect Oriented Programming(AOP)，面向切面编程，是一个比较热门的话题。AOP主要实现的目的是针对业务处理过程中的切面进行提取，它所面对的是处理过程中的某个步骤或阶段，以获得逻辑过程中各部分之间低耦合性的隔离效果。比如我们最常见的就是日志记录了，不可能每个业务都去加写日志发的功能吧，我们就用切面，将需要记录日志的地方切一下，配置自动记录日志即可。
+
+具体可以看我的文章https://blog.csdn.net/moshowgame/article/details/85814808
+<table><tbody>
+<tr><td>http://localhost:9998/aop/index</td><td>查看控制台AOP情况</td></tr>
+</tbody></table>
+
 ###四、版本更新
 <br><br>
+>☛20190105 update:<br>
+1.新增AOP模块，可以练习AOP功能。2.更新SpringBoot到2.0.5版本。3.更新lombok，修复某些JDK不兼容问题<br>
 >☛20181112 update:<br>
-1.优化mybatis-plus模块的导入，使用mybatis-plus stater简化操作
+1.优化mybatis-plus模块的导入，使用mybatis-plus stater简化操作<br>
 >☛20180815 update:<br>
 1.new POI-TL project<br>
 >☛20180711 update:<br>
