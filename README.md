@@ -42,7 +42,9 @@ http://blog.csdn.net/moshowgame
 </tr>
 <td>spring-cloud-study-aop</td>  <td>aop切面编程</td>  <td>9998</td>
 </tr>
-<td>spring-cloud-study-udp</td>  <td>netty udp</td>  <td>9898</td>
+<td>spring-cloud-study-udp</td>  <td>netty实现udp</td>  <td>9898</td>
+</tr>
+<td>spring-cloud-study-netty-websocket</td>  <td>netty实现websocket</td>  <td>6688</td>
 </tr>
 </tbody></table>
 <br>
@@ -212,18 +214,31 @@ Aspect Oriented Programming(AOP)，面向切面编程，是一个比较热门的
 <tr><td>http://localhost:9998/aop/index</td><td>查看控制台AOP情况</td></tr>
 </tbody></table>
 
-aop
+netty-udp
 ----
-UDP是用户数据报协议（User Datagrame Protocol,UDP）的简称，主要作用是将网络数据流压缩成数据报的形式，提供面向事务的简单信息传送服务。
+UDP是用户数据报协议（User Datagrame Protocol,UDP）的简称，主要作用是将网络数据流压缩成数据报的形式，提供面向事务的简单信息传送服务。<br>
+具体可以看我的文章https://blog.csdn.net/moshowgame/article/details/88420880
 <table><tbody>
 <tr><td>服务端运行方法</td><td>运行ChineseProverbServer的main方法</td></tr>
 <tr><td>客户端运行方法</td><td>运行ChineseProverbClient的main方法</td></tr>
+</tbody></table>
+
+netty-websocket
+----
+基于Netty的Websocket，稳定性性能秒杀原生。<br>
+具体可以看我的文章https://blog.csdn.net/moshowgame/article/details/91552993
+<table><tbody>
+<tr><td>http://127.0.0.1:6688/netty-websocket/index</td><td>运行多个查看结果</td></tr>
 </tbody></table>
 
 ###四、版本更新
 <br><br>
 
 <table><tbody>
+<tr><td>
+20190612 update:<br>
+- 新增基于Netty的WebSocket模块。
+</td></tr>
 <tr><td>
 20190122 update:<br>
 - 新增基于Netty的UDP模块。

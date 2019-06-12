@@ -44,7 +44,8 @@
 		<module>spring-cloud-study-aop</module>
 		<!-- 基于netty的udp服务器 -->
 		<module>spring-cloud-study-udp</module>
-
+		<!-- 基于netty的websocket服务器 -->
+		<module>spring-cloud-study-netty-websocket</module>
 	</modules>
 
 
