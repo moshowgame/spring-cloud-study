@@ -44,8 +44,8 @@ public class NettyServer {
                             //以块的方式来写的处理器
                             ch.pipeline().addLast(new ChunkedWriteHandler());
                             ch.pipeline().addLast(new HttpObjectAggregator(8192));
-                            ch.pipeline().addLast(new WebSocketServerProtocolHandler("/ws", "WebSocket", true, 65536 * 10));
                             ch.pipeline().addLast(new MyWebSocketHandler());
+                            ch.pipeline().addLast(new WebSocketServerProtocolHandler("/ws", null, true, 65536 * 10));
                         }
                     });
             ChannelFuture cf = sb.bind().sync(); // 服务器异步创建绑定

@@ -10,7 +10,7 @@
             window.WebSocket = window.MozWebSocket;
         }
         if(window.WebSocket){
-            socket = new WebSocket("ws://127.0.0.1:12345/ws");
+            socket = new WebSocket("ws://127.0.0.1:12345/ws?uid=666&gid=777");
             socket.onmessage = function(event){
                 var ta = document.getElementById('responseText');
                 ta.value += event.data+"\r\n";
