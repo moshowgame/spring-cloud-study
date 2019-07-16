@@ -46,6 +46,8 @@
 		<module>spring-cloud-study-udp</module>
 		<!-- 基于netty的websocket服务器 -->
 		<module>spring-cloud-study-netty-websocket</module>
+		<!-- spring-security -->
+		<module>spring-cloud-study-security</module>
 	</modules>
 
 

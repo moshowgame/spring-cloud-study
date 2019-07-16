@@ -40,11 +40,17 @@ http://blog.csdn.net/moshowgame
 <tr>
 <td>spring-cloud-study-poi</td>  <td>poi导入</td>  <td>8899</td>
 </tr>
+<tr>
 <td>spring-cloud-study-aop</td>  <td>aop切面编程</td>  <td>9998</td>
 </tr>
+<tr>
 <td>spring-cloud-study-udp</td>  <td>netty实现udp</td>  <td>9898</td>
 </tr>
+<tr>
 <td>spring-cloud-study-netty-websocket</td>  <td>netty实现websocket</td>  <td>6688</td>
+</tr>
+<tr>
+<td>spring-cloud-study-security</td>  <td>spring-security-demo自定义授权</td>  <td>9999</td>
 </tr>
 </tbody></table>
 <br>
@@ -52,10 +58,10 @@ http://blog.csdn.net/moshowgame
 ###一、运行环境
 
 <br>
- - 版本:Spring-Cloud 2.0<br>
+ - 版本:Spring-Cloud 2.0.X<br>
  - 环境:JDK1.8(8~10都可以)<br>
  - 编码:UTF-8<br>
- - IDE:Spring Tool Suit(STS)<br>
+ - IDE:Spring Tool Suit(STS)/IDEA<br>
 
 ```
  <properties>
@@ -231,10 +237,21 @@ netty-websocket
 <tr><td>http://127.0.0.1:6688/netty-websocket/index</td><td>运行多个查看结果</td></tr>
 </tbody></table>
 
+spring-security
+----
+基于spring-security的自定义登录模块。<br>
+<table><tbody>
+<tr><td>http://localhost:9999/security/index</td><td>首页</td></tr>
+<tr><td>http://localhost:9999/security/login</td><td>登录页面</td></tr>
+<tr><td>http://localhost:9999/security/user/list</td><td>需要授予USER权限访问的页面</td></tr>
+</tbody></table>
 ###四、版本更新
 <br><br>
 
 <table><tbody>
+<tr><td>
+20190716 update:<br>
+- 新增SpringSecurity自定义登录模块。
 <tr><td>
 20190612 update:<br>
 - 新增基于Netty的WebSocket模块。
