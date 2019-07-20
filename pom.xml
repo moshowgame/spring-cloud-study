@@ -14,49 +14,32 @@
 		<version>2.0.5.RELEASE</version>
 	</parent>
 
-	<modules>
-		<!-- eureka注册中心 -->
-		<module>spring-cloud-study-eureka</module>
-		<!-- zuul转发路由 -->
-		<module>spring-cloud-study-zuul</module>
-		<!-- demo项目(包括WebSocket) -->
-		<module>spring-cloud-study-demo</module>
-		<!-- 配置中心 -->
-		<module>spring-cloud-study-configcenter</module>
-		<!-- jpa(hibernate实现) -->
-		<module>spring-cloud-study-jpa</module>
-		<!-- feign微服务远程调用 -->
-		<module>spring-cloud-study-feign</module>
-		<!-- redis热点缓存数据库 -->
-		<module>spring-cloud-study-redis</module>
-		<!-- jms消息队列 -->
-		<module>spring-cloud-study-jms</module>
-		<!-- Mybatis Plus -->
-		<module>spring-cloud-study-mybatisplus</module>
-		<!-- shiro -->
-		<!--<module>spring-cloud-study-shiro</module>-->
-
-		<!-- poi -->
-		<module>spring-cloud-study-poi</module>
-		<!-- drools -->
-		<module>spring-cloud-study-drools</module>
-		<!-- aop -->
-		<module>spring-cloud-study-aop</module>
-		<!-- 基于netty的udp服务器 -->
-		<module>spring-cloud-study-udp</module>
-		<!-- 基于netty的websocket服务器 -->
-		<module>spring-cloud-study-netty-websocket</module>
-		<!-- spring-security -->
-		<module>spring-cloud-study-security</module>
-	</modules>
-
-
 	<properties>
 		<!-- 指定编码 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- 指定jdk版本 -->
 		<java.version>1.8</java.version>
 	</properties>
+
+
+	<modules>
+		<module>spring-cloud-study-eureka</module>
+		<module>spring-cloud-study-zuul</module>
+		<module>spring-cloud-study-demo</module>
+		<module>spring-cloud-study-configcenter</module>
+		<module>spring-cloud-study-jpa</module>
+		<module>spring-cloud-study-feign</module>
+		<module>spring-cloud-study-redis</module>
+		<module>spring-cloud-study-jms</module>
+		<module>spring-cloud-study-mybatisplus</module>
+		<module>spring-cloud-study-poi</module>
+		<module>spring-cloud-study-drools</module>
+		<module>spring-cloud-study-aop</module>
+		<module>spring-cloud-study-udp</module>
+		<module>spring-cloud-study-netty-websocket</module>
+		<module>spring-cloud-study-security</module>
+		<module>spring-cloud-study-security-jwt</module>
+	</modules>
 
 	<dependencyManagement>
 		<dependencies>

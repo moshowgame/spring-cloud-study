@@ -52,18 +52,21 @@ http://blog.csdn.net/moshowgame
 <tr>
 <td>spring-cloud-study-security</td>  <td>spring-security-demo自定义授权</td>  <td>9999</td>
 </tr>
+<tr>
+<td>spring-cloud-study-security-jwt</td>  <td>spring-security-JWT授权</td>  <td>9999</td>
+</tr>
 </tbody></table>
 <br>
 
 ###一、运行环境
 
 <br>
- - 版本:Spring-Cloud 2.0.X<br>
- - 环境:JDK1.8(8~10都可以)<br>
+ - 版本:SpringCloud 2.X(大部分模块可以拆分运行在SpringBoot2.X)<br>
+ - 环境:JDK1.8<br>
  - 编码:UTF-8<br>
- - IDE:Spring Tool Suit(STS)/IDEA<br>
+ - IDE:Spring Tool Suit(STS)/IDEA(推荐)<br>
 
-```
+```xml
  <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.8</java.version>
@@ -81,6 +84,8 @@ http://blog.csdn.net/moshowgame
  6. 可以启动spring-cloud-study-feign，他会远程调用demo的内容<br>
  7. 可以单独启动spring-cloud-study-redis需要自己启动一个redis，参考https://blog.csdn.net/moshowgame/article/details/80792774<br>
  8. 可以单独启动spring-cloud-study-jms，已经内置ActiveMQ，也可以自己额外配置,详情请看https://blog.csdn.net/moshowgame/article/details/80836621<br>
+ 9. 其他未提及模块均可独立启动，可不依赖eureka注册中心，为学习用。
+
 ###三、使用说明
 
 eureka
@@ -245,13 +250,27 @@ spring-security
 <tr><td>http://localhost:9999/security/login</td><td>登录页面</td></tr>
 <tr><td>http://localhost:9999/security/user/list</td><td>需要授予USER权限访问的页面</td></tr>
 </tbody></table>
+
+spring-security-jwt
+----
+基于spring-security-jwt授权模块。详情请看https://blog.csdn.net/moshowgame/article/details/96476554<br>
+<table><tbody>
+<tr><td>localhost:9999/security/auth</td><td>登录接口，json body是{"username":"users","password":"pass"}</td></tr>
+<tr><td>localhost:9999/security/token</td><td>获取Token信息，Header是Authorization:Bearer +Token</td></tr>
+</tbody></table>
+
 ###四、版本更新
 <br><br>
 
 <table><tbody>
 <tr><td>
+20190720 update:<br>
+- 新增SpringSecurity-JWT授权验证模块。
+</td></tr>
+<tr><td>
 20190716 update:<br>
 - 新增SpringSecurity自定义登录模块。
+</td></tr>
 <tr><td>
 20190612 update:<br>
 - 新增基于Netty的WebSocket模块。
