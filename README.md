@@ -58,7 +58,8 @@ http://blog.csdn.net/moshowgame
 </tbody></table>
 <br>
 
-###一、运行环境
+一、运行环境
+----
 
 <br>
  - 版本:SpringCloud 2.X(大部分模块可以拆分运行在SpringBoot2.X)<br>
@@ -73,7 +74,8 @@ http://blog.csdn.net/moshowgame
   </properties>
 ```
 
-###二、有关项目启动和配置的说明
+二、有关项目启动和配置的说明
+----
 
  1. 最先启动的是spring-cloud-study-eureka，因为它是注册中心，大多数微服务必须依赖于它才能实现必要的功能。 <br>
  2. 接着zuul路由中心，启用spring-cloud-study-zuul，并配置yml文件即可(已经带了一点小配置，可根据实际情况修改)。 <br>
@@ -86,7 +88,8 @@ http://blog.csdn.net/moshowgame
  8. 可以单独启动spring-cloud-study-jms，已经内置ActiveMQ，也可以自己额外配置,详情请看https://blog.csdn.net/moshowgame/article/details/80836621<br>
  9. 其他未提及模块均可独立启动，可不依赖eureka注册中心，为学习用。
 
-###三、使用说明
+三、使用说明
+----
 
 eureka
 ----
@@ -259,56 +262,67 @@ spring-security-jwt
 <tr><td>localhost:9999/security/token</td><td>获取Token信息，Header是Authorization:Bearer +Token</td></tr>
 </tbody></table>
 
-###四、版本更新
-<br><br>
+四、版本更新
+----
 
-<table><tbody>
-<tr><td>
-20190720 update:<br>
-- 新增SpringSecurity-JWT授权验证模块。
-</td></tr>
-<tr><td>
-20190716 update:<br>
-- 新增SpringSecurity自定义登录模块。
-</td></tr>
-<tr><td>
-20190612 update:<br>
-- 新增基于Netty的WebSocket模块。
-</td></tr>
-<tr><td>
-20190122 update:<br>
-- 新增基于Netty的UDP模块。
-</td></tr>
-<tr><td>20190105 update:<br>
-- 新增AOP模块，可以练习AOP功能。<br>
-- 更新SpringBoot到2.0.5版本。<br>
-- 更新lombok，修复某些JDK不兼容问题<br>
-</td></tr>
-<tr><td>20181112 update:<br>
-- 优化mybatis-plus模块的导入，使用mybatis-plus stater简化操作<br>
-</td></tr>
-<tr><td>20180815 update:<br>
-- new POI-TL project<br>
-</td></tr>
-<tr><td>20180711 update:<br>
-- new MybatisPlus project<br>
-</td></tr>
-<tr><td>20180627 update:<br>
-- new Jms project<br>
-</td></tr>
-<tr><td>20180624 update:<br>
-- new Redis project<br>
-</td></tr>
-<tr><td>20180609 update:<br>
-- new feign project<br>
-- 优化说明<br>
-</td></tr>
-<tr><td>20180603 update:<br>
-- new jpa project<br>
-- 优化调整<br>
-</td></tr>
-<tr><td>20180602 update:<br>
-- 优化调整<br>
-- new configcenter project<br>
-</td></tr>
-</tbody></table>
+<br><br>
+  <table>
+   <tr>
+      <th>更新时间</th>
+      <th>更新内容</th>
+    </tr>
+   <tbody> 
+    <tr> 
+     <td>20190720</td> 
+     <td>- 新增SpringSecurity-JWT授权验证模块。</td> 
+    </tr> 
+    <tr>
+     <td> 20190716 </td>
+     <td> - 新增SpringSecurity自定义登录模块。 </td>
+    </tr> 
+    <tr>
+     <td> 20190612 </td>
+     <td> - 新增基于Netty的WebSocket模块。 </td>
+    </tr> 
+    <tr>
+     <td> 20190122 </td>
+     <td> - 新增基于Netty的UDP模块。 </td>
+    </tr> 
+    <tr>
+     <td>20190105 </td>
+     <td> - 新增AOP模块，可以练习AOP功能。<br>- 更新SpringBoot到2.0.5版本。 <br>- 更新lombok，修复某些JDK不兼容问题 </td>
+    </tr> 
+    <tr>
+     <td>20181112 </td>
+     <td> - 优化mybatis-plus模块的导入，使用mybatis-plus stater简化操作 </td>
+    </tr> 
+    <tr>
+     <td>20180815 </td>
+     <td> - new POI-TL project </td>
+    </tr> 
+    <tr>
+     <td>20180711 </td>
+     <td> - new MybatisPlus project </td>
+    </tr> 
+    <tr>
+     <td>20180627 </td>
+     <td> - new Jms project </td>
+    </tr> 
+    <tr>
+     <td>20180624 </td>
+     <td> - new Redis project </td>
+    </tr> 
+    <tr>
+     <td>20180609 </td>
+     <td> - new feign project<br>- 优化说明 </td>
+    </tr> 
+    <tr>
+     <td>20180603 </td>
+     <td> - new jpa project<br>- 优化调整 </td>
+    </tr> 
+    <tr>
+     <td>20180602 </td>
+     <td> - 优化调整<br>- new configcenter project </td>
+    </tr> 
+   </tbody>
+  </table>
