@@ -1,0 +1,21 @@
+server:
+  port: 9999
+  servlet:
+      context-path: /es
+tomcat:
+    remote-ip-header: x-forward-for
+    uri-encoding: UTF-8
+    max-threads: 10
+    background-processor-delay: 30
+spring:
+    http:
+      encoding:
+        force: true
+        charset: UTF-8
+    application:
+        name: spring-cloud-study-elasticsearch
+        author: zhengkai.blog.csdn.net
+    data:
+        elasticsearch:
+          cluster-nodes: 127.0.0.1:9300
+          cluster-name: elasticsearch
