@@ -56,6 +56,9 @@ http://blog.csdn.net/moshowgame
 <tr>
 <td>spring-cloud-study-security-jwt</td>  <td>spring-security-JWT授权</td>  <td>9999</td>
 </tr>
+<tr>
+<td>spring-cloud-study-elasticsearch</td>  <td>spring-data-elasticsearch，强大的搜索和分析引擎</td>  <td>9999</td>
+</tr>
 </tbody></table>
 <br>
 
@@ -263,6 +266,14 @@ spring-security-jwt
 <tr><td>localhost:9999/security/token</td><td>获取Token信息，Header是Authorization:Bearer +Token</td></tr>
 </tbody></table>
 
+spring-data-elasticsearch
+----
+基于spring-boot-starter-data-elasticsearch的搜索和分析引擎模块。详情请看https://blog.csdn.net/moshowgame/article/details/96768494<br>
+<table><tbody>
+<tr><td>http://localhost:9999/es/save</td><td>新增记录</td></tr>
+<tr><td>http://localhost:9999/es/search</td><td>搜索记录</td></tr>
+</tbody></table>
+
 四、版本更新
 ----
 
@@ -273,6 +284,10 @@ spring-security-jwt
       <th>更新内容</th>
     </tr>
    <tbody> 
+       <tr> 
+        <td>20190722</td> 
+        <td>- 新增Spring-Data-ElasticSearch授权验证模块。</td> 
+       </tr> 
     <tr> 
      <td>20190720</td> 
      <td>- 新增SpringSecurity-JWT授权验证模块。</td> 
