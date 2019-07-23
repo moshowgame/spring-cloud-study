@@ -1,0 +1,24 @@
+server:
+  port: 9999
+  servlet:
+      context-path: /security
+tomcat:
+    remote-ip-header: x-forward-for
+    uri-encoding: UTF-8
+    max-threads: 10
+    background-processor-delay: 30
+spring:
+    http:
+      encoding:
+        force: true
+        charset: UTF-8
+    application:
+        name: spring-cloud-study-security-jwt
+  #here is the importance configs of JWT
+jwt:
+  route:
+    authentication:
+      path: /auth
+  header: Authorization
+  expiration: 604800
+  secret: zhengkai.blog.csdn.net
