@@ -59,6 +59,8 @@ http://blog.csdn.net/moshowgame
 <tr>
 <td>spring-cloud-study-elasticsearch</td>  <td>spring-data-elasticsearch，强大的搜索和分析引擎</td>  <td>9999</td>
 </tr>
+<td>spring-cloud-study-drools</td>  <td>drools(jboss rules)强大的业务规则引擎</td>  <td>9999</td>
+</tr>
 </tbody></table>
 <br>
 
@@ -66,10 +68,10 @@ http://blog.csdn.net/moshowgame
 ----
 
 <br>
- - 版本:SpringCloud 2.X(大部分模块可以拆分运行在SpringBoot2.X)<br>
- - 环境:JDK1.8<br>
+ - 版本:SpringCloud/SpringBoot 2.X<br>
+ - 环境:JDK8/11<br>
  - 编码:UTF-8<br>
- - IDE:Spring Tool Suit(STS)/IDEA(推荐)<br>
+- IDE:Spring Tool Suit(STS)/IDEA(推荐)/VSCode with STS(New)<br>
 
 ```xml
  <properties>
@@ -81,16 +83,11 @@ http://blog.csdn.net/moshowgame
 二、有关项目启动和配置的说明
 ----
 
- 1. 最先启动的是spring-cloud-study-eureka，因为它是注册中心，大多数微服务必须依赖于它才能实现必要的功能。 <br>
- 2. 接着zuul路由中心，启用spring-cloud-study-zuul，并配置yml文件即可(已经带了一点小配置，可根据实际情况修改)。 <br>
- 3. 然后启用spring-cloud-study-demo，这是一个demo项目<br>
- 4. 可以启用spring-cloud-study-configcenter，这里可以从yml或者其他地方读取并统一配置变量<br>
- 5. 可以启用spring-cloud-study-jpa，配置一下yml里面数据库连接池的地址，默认是127.0.0.1:3306 root/root，
-启动项目可以自动建表，使用init方法可以自动初始化语句，无需自己动数据库<br>
- 6. 可以启动spring-cloud-study-feign，他会远程调用demo的内容<br>
- 7. 可以单独启动spring-cloud-study-redis需要自己启动一个redis，参考https://blog.csdn.net/moshowgame/article/details/80792774<br>
- 8. 可以单独启动spring-cloud-study-jms，已经内置ActiveMQ，也可以自己额外配置,详情请看https://blog.csdn.net/moshowgame/article/details/80836621<br>
- 9. 其他未提及模块均可独立启动，可不依赖eureka注册中心，为学习用。
+- 由于子项目太多，暂时移除所有模块的引用，有需要请再父项目的module中启用 <br>
+- 其他未提及模块均为springboot，可独立启动，可不依赖eureka注册中心。
+- 微服务模块，请先启动spring-cloud-study-eureka，因为它是注册中心，大多数微服务必须依赖于它才能实现必要的功能。 <br>
+- zuul路由中心(后续会升级为ApiGateway)，启用spring-cloud-study-zuul，并配置yml文件即可(已经带了一点小配置，可根据实际情况修改)。 <br>
+- 按需启用spring-cloud-study-demo/spring-cloud-study-configcenter/spring-cloud-study-jpa/spring-cloud-study-feign等等<br>
 
 三、使用说明
 ----
@@ -274,6 +271,15 @@ spring-data-elasticsearch
 <tr><td>http://localhost:9999/es/search</td><td>搜索记录</td></tr>
 </tbody></table>
 
+springboot2+Drools
+----
+Drools是一个易于访问企业策略、易于调整以及易于管理的开源业务规则引擎，特点就是速度快、效率高。 如果你还在使用复杂的`JAVA代码`校验复杂的`优惠券/超市打折/计价规则/商品定价/阶梯定价/游戏规则/业务规则`？试试用Drools来解救代码吧，适用但不仅仅包含以上场景。详情请看https://blog.csdn.net/moshowgame/article/details/98061651<br>
+<table><tbody>
+<tr><td>http://localhost:9999/drools/taxi/cal?distanceInMile=18</td><td>打车18公里</td></tr>
+<tr><td>http://localhost:9999/drools/taxi/cal?distanceInMile=2</td><td>打车2公里</td></tr>
+<tr><td>http://localhost:9999/drools/taxi/cal?distanceInMile=3.5</td><td>打车3.5公里</td></tr>
+</tbody></table>
+
 四、版本更新
 ----
 
@@ -284,7 +290,12 @@ spring-data-elasticsearch
       <th>更新内容</th>
     </tr>
    <tbody> 
-       <tr> 
+   <tr> 
+        <td>20190802</td> 
+        <td>- 新增Spring-Drools业务规则引擎模块。<br>- 由于子项目太多，暂时移除所有模块的引用，有需要请再父项目的module中启用<br>- empty为空白项目，可以直接copy出来改一下当新模块使用</td> 
+       </tr> 
+    <tr> 
+    <tr> 
         <td>20190722</td> 
         <td>- 新增Spring-Data-ElasticSearch授权验证模块。</td> 
        </tr> 

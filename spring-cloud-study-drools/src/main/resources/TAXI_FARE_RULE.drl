@@ -1,0 +1,58 @@
+global com.softdev.system.demo.entity.TaxiFare rideFare;
+import com.softdev.system.demo.entity.TaxiRide;
+import java.math.BigDecimal;
+
+dialect  "mvel"
+
+/**
+*  的士打表计价Drools 
+* @Author by zhengkai.blog.csdn.net
+*/
+rule "Calculate Taxi Fare - Output "
+salience 100
+    when
+        $taxiRide:TaxiRide();
+    then
+        System.out.println("#公里数 : "+$taxiRide.getDistanceInMile);
+        System.out.println("#起步价 : "+12);
+        rideFare.setNightSurcharge(BigDecimal.ZERO);
+        rideFare.setRideFare(BigDecimal.ZERO);
+end 
+
+        
+rule "Calculate Taxi Fare - Less than three kilometers"
+salience 99
+    when
+    	//起步价：首3公里12元;  不论白天黑夜 || distanceInMile = 3
+        $taxiRide:TaxiRide(distanceInMile <= 3);
+    then
+        rideFare.setRideFare(new BigDecimal(12));
+end
+
+rule "Calculate Taxi Fare - 3 ~ 15 kilometers"
+salience 99
+    when
+    	//续租价：超过3公里部分，每公里2.6元; 非夜间
+        $taxiRide:TaxiRide( isNightSurcharge == false , distanceInMile > 3 , distanceInMile <= 15);
+    then
+    
+        BigDecimal secondFare = ($taxiRide.getDistanceInMile().subtract(new BigDecimal(3))).multiply(new BigDecimal(2.6));
+        System.out.println("#续租价 : "+secondFare);
+        rideFare.setRideFare(new BigDecimal(12).add(secondFare));
+        System.out.println("#应付金额 : "+rideFare.getRideFare());
+end
+
+rule "Calculate Taxi Fare - 15~25 kilometers"
+salience 99
+    when
+    	//续租价：超过3公里部分，每公里2.6元; 
+		//返空费实行阶梯附加，15至25公里按照续租价加收20%
+        $taxiRide:TaxiRide( isNightSurcharge == false , distanceInMile > 15 , distanceInMile <= 25);
+    then
+    
+        BigDecimal secondFare = ($taxiRide.getDistanceInMile().subtract(new BigDecimal(15))).multiply(new BigDecimal(2.6)).multiply(new BigDecimal(1.2));
+        System.out.println("#续租价 : "+secondFare);
+        //12+13x2.6
+        rideFare.setRideFare(new BigDecimal(45.8).add(secondFare));
+        System.out.println("#应付金额 : "+rideFare.getRideFare());
+end

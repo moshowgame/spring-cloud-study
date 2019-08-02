@@ -1,0 +1,11 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /drools
+spring:
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+  application:
+    name: spring-cloud-study-drools
