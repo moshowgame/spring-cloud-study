@@ -1,9 +1,11 @@
-![image](https://img.shields.io/badge/Spring%20Cloud-%E2%98%85%E2%98%85%E2%98%85-green.svg)
-![image](https://img.shields.io/badge/Netflix-%E2%98%85%E2%98%85%E2%98%85-red.svg)
+![image](https://img.shields.io/badge/SpringBoot2-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85-brightgreen.svg)
+![image](https://img.shields.io/badge/SpringCloud2-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85-brightgreen.svg)
+[![Build Status](https://travis-ci.org/moshowgame/spring-cloud-study.svg?branch=master)](https://travis-ci.org/moshowgame/spring-cloud-study)
 
-spring-cloud-study 微服务组件学习
+SpringBootLearning|SpringCloudLearning|SpringBootStudy|SpringCloudStudy
 ===
-
+微服务学习，SpringBoot学习项目。
+<br>
 http://blog.csdn.net/moshowgame
 
 <table>
@@ -68,10 +70,10 @@ http://blog.csdn.net/moshowgame
 ----
 
 <br>
- - 版本:SpringCloud/SpringBoot 2.X<br>
- - 环境:JDK8/11<br>
- - 编码:UTF-8<br>
-- IDE:Spring Tool Suit(STS)/IDEA(推荐)/VSCode with STS(New)<br>
+  -  版本:SpringCloud/SpringBoot 2.X<br>
+  -  环境:JDK8/11<br>
+  -  编码:UTF-8<br>
+ - IDE:Spring Tool Suit(STS)/IDEA(推荐)/VSCode with STS(New)<br>
 
 ```xml
  <properties>
@@ -293,7 +295,7 @@ Drools是一个易于访问企业策略、易于调整以及易于管理的开�
    <tbody> 
    <tr> 
         <td>20190802</td> 
-        <td>- 新增Spring-Drools业务规则引擎模块。<br>- 由于子项目太多，暂时移除所有模块的引用，有需要请再父项目的module中启用<br>- empty为空白项目，可以直接copy出来改一下当新模块使用</td> 
+        <td>- 新增Spring-Drools业务规则引擎模块。<br>- 由于子项目太多，暂时移除所有模块的引用，有需要请再父项目的module中启用<br>- empty为空白项目，可以直接copy出来改一下当新模块使用 <br>新增Travis CI </td> 
        </tr> 
     <tr> 
     <tr> 
