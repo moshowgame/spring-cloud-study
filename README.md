@@ -2,9 +2,9 @@
 ![image](https://img.shields.io/badge/SpringCloud2-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85-brightgreen.svg)
 [![Build Status](https://travis-ci.org/moshowgame/spring-cloud-study.svg?branch=master)](https://travis-ci.org/moshowgame/spring-cloud-study)
 
-SpringBootLearning|SpringCloudLearning|SpringBootStudy|SpringCloudStudy
+SpringBootLearning && SpringCloudLearning
 ===
-微服务学习，SpringBoot学习项目。
+SpringBoot+微服务学习项目。
 <br>
 http://blog.csdn.net/moshowgame
 
