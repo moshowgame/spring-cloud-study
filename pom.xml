@@ -23,7 +23,7 @@
 
 
 	<modules>
-		<module>spring-cloud-study-eureka</module>
+		<!--<module>spring-cloud-study-eureka</module>
 		<module>spring-cloud-study-zuul</module>
 		<module>spring-cloud-study-demo</module>
 		<module>spring-cloud-study-configcenter</module>
@@ -39,7 +39,8 @@
 		<module>spring-cloud-study-netty-websocket</module>
 		<module>spring-cloud-study-security</module>
 		<module>spring-cloud-study-security-jwt</module>
-		<module>spring-cloud-study-elasticsearch</module>
+		<module>spring-cloud-study-elasticsearch</module>-->
+		<module>spring-cloud-study-empty</module>
 	</modules>
 
 	<dependencyManagement>
