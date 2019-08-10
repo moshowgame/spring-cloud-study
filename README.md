@@ -61,7 +61,11 @@ http://blog.csdn.net/moshowgame
 <tr>
 <td>spring-cloud-study-elasticsearch</td>  <td>spring-data-elasticsearch，强大的搜索和分析引擎</td>  <td>9999</td>
 </tr>
+<tr>
 <td>spring-cloud-study-drools</td>  <td>drools(jboss rules)强大的业务规则引擎</td>  <td>9999</td>
+</tr>
+<tr>
+<td>spring-cloud-study-logstash</td>  <td>springboot2+logback+logstash+elasticsearch+kibana打造强大的日志收集分析系统</td>  <td>9999</td>
 </tr>
 </tbody></table>
 <br>
@@ -140,7 +144,6 @@ JPA是一个标准，Hibernate是实现，实现简单、强大的CRUD功能。�
 <tr><td>http://127.0.0.1:4444/jpa/user/init/8899</td><td>初始化8899的用户 <br>
 <tr><td>http://127.0.0.1:4444/jpa/user/roles/8899</td><td>获取8899用户的角色 <br>
 </tbody></table>
-
 
 Feign
 ----
@@ -283,6 +286,15 @@ Drools是一个易于访问企业策略、易于调整以及易于管理的开�
 <tr><td>http://127.0.0.1:9999/drools/taxi/cal?distanceInMile=3.5</td><td>打车3.5公里</td></tr>
 </tbody></table>
 
+SpringBoot2+Logback+Logstash+ElasticSearch+Kibana
+----
+Logstash收集AppServer产生的Log，并存放到ElasticSearch集群中，而Kibana则从ES集群中查询数据生成图表，再返回给Browser。详情请看https://blog.csdn.net/moshowgame/article/details/98851656<br>
+<table><tbody>
+<tr><td>http://127.0.0.1:9200</td><td>ElasticSearch查看运行情况</td></tr>
+<tr><td>http://127.0.0.1:9999/logstash</td><td>输出Log日志</td></tr>
+<tr><td>http://127.0.0.1:5601/app/kibana</td><td>kibana查看日志</td></tr>
+</tbody></table>
+
 四、版本更新
 ----
 
@@ -293,6 +305,10 @@ Drools是一个易于访问企业策略、易于调整以及易于管理的开�
       <th>更新内容</th>
     </tr>
    <tbody> 
+    <tr> 
+        <td>20190810</td> 
+        <td>- 新增SpringBoot2+Logback+Logstash+ElasticSearch+Kibana打造强大的日志收集分析系统。</td> 
+    </tr>
    <tr> 
         <td>20190802</td> 
         <td>- 新增Spring-Drools业务规则引擎模块。<br>- 由于子项目太多，暂时移除所有模块的引用，有需要请再父项目的module中启用<br>- empty为空白项目，可以直接copy出来改一下当新模块使用 <br>新增Travis CI </td> 
@@ -301,7 +317,7 @@ Drools是一个易于访问企业策略、易于调整以及易于管理的开�
     <tr> 
         <td>20190722</td> 
         <td>- 新增Spring-Data-ElasticSearch授权验证模块。</td> 
-       </tr> 
+    </tr> 
     <tr> 
      <td>20190720</td> 
      <td>- 新增SpringSecurity-JWT授权验证模块。</td> 
