@@ -16,7 +16,7 @@ mvn clean package
     stage('maven') {
       steps {
         sh '''/home/moshow/Development/Workspace/stop.sh
-nohup java -jar -server target/spring-cloud-study-empty-0.0.1-SNAPSHOT.jar
+/home/moshow/Development/Workspace/start.sh
 '''
       }
     }
