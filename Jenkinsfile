@@ -11,7 +11,8 @@ pipeline {
         sh '''cd spring-cloud-study-empty
 mvn clean package
 cd target
-java -jar spring-cloud-study-empty-0.0.1-SNAPSHOP.jar'''
+java -jar spring-cloud-study-empty-0.0.1-SNAPSHOT.jar
+'''
       }
     }
   }
