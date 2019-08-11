@@ -8,7 +8,10 @@ pipeline {
     }
     stage('maven') {
       steps {
-        sh 'mvn clean package'
+        sh '''cd spring-cloud-study-empty
+mvn clean package
+cd target
+java -jar spring-cloud-study-empty-0.0.1-SNAPSHOP.jar'''
       }
     }
   }
