@@ -43,7 +43,10 @@
 		<module>spring-cloud-study-elasticsearch</module
 		<module>spring-cloud-study-logstash</module>
 		-->
-		<module>spring-cloud-study-empty</module>
+		<!--
+			<module>spring-cloud-study-empty</module>
+		-->
+		<module>spring-cloud-study-websocket</module>
 	</modules>
 
 	<dependencyManagement>
