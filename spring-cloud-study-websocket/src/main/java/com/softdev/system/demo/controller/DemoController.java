@@ -7,9 +7,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
-
 import java.io.IOException;
 
+/**
+ * WebSocketController
+ * @author zhengkai.blog.csdn.net
+ */
 @RestController
 public class DemoController {
 
@@ -26,6 +29,6 @@ public class DemoController {
     @RequestMapping("/push/{toUserId}")
     public ResponseEntity<String> pushToWeb(String message, @PathVariable String toUserId) throws IOException {
         WebSocketServer.sendInfo(message,toUserId);
-        return ResponseEntity.ok("消息发送成功");
+        return ResponseEntity.ok("MSG SEND SUCCESS");
     }
 }

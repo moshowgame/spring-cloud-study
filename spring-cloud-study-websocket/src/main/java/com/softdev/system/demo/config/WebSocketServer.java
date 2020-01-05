@@ -2,8 +2,6 @@ package com.softdev.system.demo.config;
 
 import java.io.IOException;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArraySet;
-
 import javax.websocket.OnClose;
 import javax.websocket.OnError;
 import javax.websocket.OnMessage;
@@ -11,7 +9,6 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
-
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang.StringUtils;
@@ -21,7 +18,8 @@ import cn.hutool.log.LogFactory;
 
 
 /**
- * @author Moshow
+ * WebSocketServer
+ * @author zhengkai.blog.csdn.net
  */
 @ServerEndpoint("/imserver/{userId}")
 @Component
