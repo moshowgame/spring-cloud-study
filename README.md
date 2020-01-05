@@ -67,6 +67,8 @@ http://blog.csdn.net/moshowgame
 <tr>
 <td>spring-cloud-study-logstash</td>  <td>springboot2+logback+logstash+elasticsearch+kibana打造强大的日志收集分析系统</td>  <td>9999</td>
 </tr>
+<td>spring-cloud-study-websocket</td>  <td>springboot2+websocket,整合基于IM的优化版本</td>  <td>9999</td>
+</tr>
 </tbody></table>
 <br>
 
@@ -89,11 +91,12 @@ http://blog.csdn.net/moshowgame
 二、有关项目启动和配置的说明
 ----
 
-- 由于子项目太多，暂时移除所有模块的引用，有需要请再父项目的module中启用 <br>
+- 由于子项目太多，暂时移除所有模块的引用，有需要请再父项目的module中启用pom.xml <br>
 - 其他未提及模块均为springboot，可独立启动，可不依赖eureka注册中心。
 - 微服务模块，请先启动spring-cloud-study-eureka，因为它是注册中心，大多数微服务必须依赖于它才能实现必要的功能。 <br>
 - zuul路由中心(后续会升级为ApiGateway)，启用spring-cloud-study-zuul，并配置yml文件即可(已经带了一点小配置，可根据实际情况修改)。 <br>
 - 按需启用spring-cloud-study-demo/spring-cloud-study-configcenter/spring-cloud-study-jpa/spring-cloud-study-feign等等<br>
+- 其他模块均不需要eureka等模块，可直接启动
 
 三、使用说明
 ----
@@ -295,6 +298,15 @@ Logstash收集AppServer产生的Log，并存放到ElasticSearch集群中，而Ki
 <tr><td>http://127.0.0.1:5601/app/kibana</td><td>kibana查看日志</td></tr>
 </tbody></table>
 
+Websocket IM
+----
+基于SpringBoot2+WebSocket,整合了简单IM的优化版,简单明了入门无压力,集群部分未实现(即发送的userId不在当前服务器)
+<table><tbody>
+<tr><td>http://127.0.0.1:9999/demo/page</td><td>打开第一个页面,userId=10/toUserId=20</td></tr>
+<tr><td>http://127.0.0.1:9999/demo/page</td><td>打开第二个页面,userId=20/toUserId=10</td></tr>
+<tr><td>http://127.0.0.1:9999/demo/push/10?message=moshowCallU</td><td>给对应的用户推送信息</td></tr>
+</tbody></table>
+
 四、版本更新
 ----
 
@@ -306,10 +318,14 @@ Logstash收集AppServer产生的Log，并存放到ElasticSearch集群中，而Ki
     </tr>
    <tbody> 
     <tr> 
+        <td>20200105</td> 
+        <td>- 新增SpringBoot2+WebSocket的简单IM优化版,优化连接技术相关内容,目前是单机版,集群版本近期发布。</td> 
+    </tr>
+    <tr> 
         <td>20190810</td> 
         <td>- 新增SpringBoot2+Logback+Logstash+ElasticSearch+Kibana打造强大的日志收集分析系统。</td> 
     </tr>
-   <tr> 
+    <tr> 
         <td>20190802</td> 
         <td>- 新增Spring-Drools业务规则引擎模块。<br>- 由于子项目太多，暂时移除所有模块的引用，有需要请再父项目的module中启用<br>- empty为空白项目，可以直接copy出来改一下当新模块使用 <br>新增Travis CI </td> 
        </tr> 
