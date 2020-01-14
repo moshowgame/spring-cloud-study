@@ -24,7 +24,6 @@ public class WsMessage implements Serializable {
      * id
      */
     @Id
-    @GeneratedValue
     private String id;
 
     /**

@@ -2,6 +2,7 @@ package com.softdev.system.demo.config;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import javax.websocket.OnClose;
 import javax.websocket.OnError;
@@ -120,9 +121,11 @@ public class WebSocketServer {
                     //否则不在这个服务器上，发送到mysql或者redis
                     WsMessage wsMessage = new WsMessage();
                     //wsMessage.setSiteId(siteId);
+                    wsMessage.setId(UUID.randomUUID().toString());
                     wsMessage.setToUserId(toUserId);
                     wsMessage.setFromUserId(userId);
                     wsMessage.setStatus(false);
+                    wsMessage.setCreateTime(new Date());
                     wsMessage.setMessage(contentText);
                     wsMessageRepository.save(wsMessage);
                 }
