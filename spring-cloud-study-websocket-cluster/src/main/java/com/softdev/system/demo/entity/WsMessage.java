@@ -40,7 +40,10 @@ public class WsMessage implements Serializable {
     * create_time
     */
     private Date createTime;
-
+    /**
+     * create_time
+     */
+    private Date readTime;
     /**
     * message
     */

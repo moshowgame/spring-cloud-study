@@ -6,9 +6,9 @@ CREATE TABLE `ws_message` (
   `message` text COLLATE utf8mb4_general_ci,
   `status` tinyint(1) DEFAULT '0',
   `site_id` varchar(50) COLLATE utf8mb4_general_ci DEFAULT '0',
+  `read_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
 
 
 CREATE TABLE `ws_site` (

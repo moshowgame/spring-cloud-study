@@ -13,9 +13,8 @@
         }else{
             console.log("您的浏览器支持WebSocket");
             //实现化WebSocket对象，指定要连接的服务器地址与端口  建立连接
-            //等同于socket = new WebSocket("ws://localhost:8888/xxxx/im/25");
-            //var socketUrl="${request.contextPath}/im/"+$("#userId").val();
-            var socketUrl="http://localhost:9999/demo/imserver/"+$("#userId").val();
+            //var socketUrl="${request.contextPath}/demo/imserver/"+$("#userId").val();
+            var socketUrl="http://localhost:"+$("#port").val()+"/demo/imserver/"+$("#userId").val();
             socketUrl=socketUrl.replace("https","ws").replace("http","ws");
             console.log(socketUrl);
             if(socket!=null){
@@ -54,6 +53,7 @@
     }
 </script>
 <body>
+<p>【端口】：<div><input id="port" name="port" type="text" value="9999"></div>
 <p>【userId】：<div><input id="userId" name="userId" type="text" value="10"></div>
 <p>【toUserId】：<div><input id="toUserId" name="toUserId" type="text" value="20"></div>
 <p>【toUserId】：<div><input id="contentText" name="contentText" type="text" value="hello websocket"></div>

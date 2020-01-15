@@ -44,7 +44,7 @@ public class WebSocketServer {
     private Session session;
     /**接收userId*/
     private String userId = null;
-    private static String siteId = RandomUtil.randomNumbers(6);
+    public static String siteId = RandomUtil.randomNumbers(6);
     private WsMessageRepository wsMessageRepository = SpringUtils.getBean(WsMessageRepository.class);
 
     private WsSiteRepository wsSiteRepository = SpringUtils.getBean(WsSiteRepository.class);
@@ -112,7 +112,7 @@ public class WebSocketServer {
                 //追加发送人(防止串改)
                 jsonObject.put("fromUserId",this.userId);
                 String toUserId=jsonObject.getString("toUserId");
-                String contentText=jsonObject.getString("contentText");
+                //String contentText=jsonObject.getString("contentText");
                 //传送给对应toUserId用户的websocket
                 if(StringUtils.isNotBlank(toUserId)&&webSocketMap.containsKey(toUserId)){
                     webSocketMap.get(toUserId).sendMessage(jsonObject.toJSONString());
@@ -126,7 +126,7 @@ public class WebSocketServer {
                     wsMessage.setFromUserId(userId);
                     wsMessage.setStatus(false);
                     wsMessage.setCreateTime(new Date());
-                    wsMessage.setMessage(contentText);
+                    wsMessage.setMessage(jsonObject.toJSONString());
                     wsMessageRepository.save(wsMessage);
                 }
             }catch (Exception e){
