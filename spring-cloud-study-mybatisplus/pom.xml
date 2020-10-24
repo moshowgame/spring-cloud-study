@@ -21,16 +21,17 @@
 	</properties>
 	<dependencies>
 
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-tx &ndash;&gt;
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
 			<version>5.1.2.RELEASE</version>
-		</dependency>
+		</dependency>-->
+		<!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
 		<dependency>
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus-boot-starter</artifactId>
-			<version>3.0.5</version>
+			<version>3.4.0</version>
 		</dependency>
 	</dependencies>
 </project>
