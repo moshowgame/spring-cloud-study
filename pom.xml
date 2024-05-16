@@ -121,7 +121,7 @@
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
-			<version>4.3.2</version>
+			<version>5.8.21</version>
 		</dependency>
 
 		<!-- lombok：修复版本过低导致运行错误 -->
